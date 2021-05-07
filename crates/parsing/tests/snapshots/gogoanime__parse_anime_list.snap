@@ -1,0 +1,553 @@
+---
+source: crates/parsing/tests/gogoanime.rs
+expression: "parse_anime_list(include_str!(\"assets/gogoanime_anime_list.html\"))"
+
+---
+Ok(
+    [
+        Anime {
+            slug: "-maria-sama-ga-miteru-haru-2nd",
+            title: "?Maria-sama ga Miteru Haru 2nd",
+        },
+        Anime {
+            slug: "hackgu-returner",
+            title: ".Hack//G.U. Returner",
+        },
+        Anime {
+            slug: "hackgu-trilogy",
+            title: ".hack//G.U. Trilogy",
+        },
+        Anime {
+            slug: "hackgift",
+            title: ".hack//Gift",
+        },
+        Anime {
+            slug: "hacklegend-of-the-twilight",
+            title: ".hack//Legend of the Twilight",
+        },
+        Anime {
+            slug: "hackliminality",
+            title: ".hack//Liminality",
+        },
+        Anime {
+            slug: "hackquantum-",
+            title: ".hack//Quantum ",
+        },
+        Anime {
+            slug: "hackroots",
+            title: ".hack//Roots",
+        },
+        Anime {
+            slug: "hackroots-dub",
+            title: ".hack//Roots (Dub)",
+        },
+        Anime {
+            slug: "hacksign",
+            title: ".Hack//Sign",
+        },
+        Anime {
+            slug: "hacksign-dub",
+            title: ".hack//Sign (Dub)",
+        },
+        Anime {
+            slug: "hacktasogare-no-udewa-densetsu-dub",
+            title: ".hack//Tasogare no Udewa Densetsu (Dub)",
+        },
+        Anime {
+            slug: "hackthe-movie-sekai-no-mukou-ni",
+            title: ".hack//The Movie: Sekai no Mukou ni",
+        },
+        Anime {
+            slug: "eiyuu-kaitai",
+            title: "\"Eiyuu\" Kaitai",
+        },
+        Anime {
+            slug: "009-recyborg",
+            title: "009 Re:Cyborg",
+        },
+        Anime {
+            slug: "009-recyborg-dub",
+            title: "009 Re:Cyborg (Dub)",
+        },
+        Anime {
+            slug: "009-1",
+            title: "009-1",
+        },
+        Anime {
+            slug: "009-1-dub",
+            title: "009-1 (Dub)",
+        },
+        Anime {
+            slug: "07-ghost",
+            title: "07-GHOST",
+        },
+        Anime {
+            slug: "100-man-no-inochi-no-ue-ni-ore-wa-tatteiru",
+            title: "100-man no Inochi no Ue ni Ore wa Tatteiru",
+        },
+        Anime {
+            slug: "100-man-no-inochi-no-ue-ni-ore-wa-tatteiru-dub",
+            title: "100-man no Inochi no Ue ni Ore wa Tatteiru (Dub)",
+        },
+        Anime {
+            slug: "100-man-no-inochi-no-ue-ni-ore-wa-tatteiru-2nd-season",
+            title: "100-man no Inochi no Ue ni Ore wa Tatteiru 2nd Season",
+        },
+        Anime {
+            slug: "100-pascal-sensei",
+            title: "100% Pascal-sensei",
+        },
+        Anime {
+            slug: "1001-nights",
+            title: "1001 Nights",
+        },
+        Anime {
+            slug: "1001-nights-dub",
+            title: "1001 Nights (Dub)",
+        },
+        Anime {
+            slug: "11eyes-",
+            title: "11eyes ",
+        },
+        Anime {
+            slug: "12-sai-chicchana-mune-no-tokimeki",
+            title: "12-sai.: Chicchana Mune no Tokimeki",
+        },
+        Anime {
+            slug: "12-sai-chicchana-mune-no-tokimeki-2nd-season",
+            title: "12-sai.: Chicchana Mune no Tokimeki 2nd Season",
+        },
+        Anime {
+            slug: "12-sai-kiss-kirai-suki",
+            title: "12-sai.: Kiss, Kirai, Suki",
+        },
+        Anime {
+            slug: "18if",
+            title: "18if",
+        },
+        Anime {
+            slug: "18if-dub",
+            title: "18if (Dub)",
+        },
+        Anime {
+            slug: "-2-x-2-shinobuden",
+            title: "2 x 2 Shinobuden",
+        },
+        Anime {
+            slug: "2-43-seiin-koukou-danshi-volley-bu",
+            title: "2.43: Seiin Koukou Danshi Volley-bu",
+        },
+        Anime {
+            slug: "227",
+            title: "22/7",
+        },
+        Anime {
+            slug: "227-83",
+            title: "22/7: 8＋3=?",
+        },
+        Anime {
+            slug: "3-choume-no-tama-uchi-no-tama-shirimasen-ka",
+            title: "3 Choume no Tama: Uchi no Tama Shirimasen ka?",
+        },
+        Anime {
+            slug: "3-x-3-eyes",
+            title: "3 x 3 Eyes",
+        },
+        Anime {
+            slug: "3-gatsu-no-lion",
+            title: "3-gatsu no Lion",
+        },
+        Anime {
+            slug: "3-gatsu-no-lion-dub",
+            title: "3-gatsu no Lion (Dub)",
+        },
+        Anime {
+            slug: "3-gatsu-no-lion-2nd-season",
+            title: "3-gatsu no Lion 2nd Season",
+        },
+        Anime {
+            slug: "3-gatsu-no-lion-2nd-season-dub",
+            title: "3-gatsu no Lion 2nd Season (Dub)",
+        },
+        Anime {
+            slug: "3-nen-d-gumi-glass-no-kamen",
+            title: "3-Nen D-Gumi Glass no Kamen",
+        },
+        Anime {
+            slug: "30-sai-no-hoken-taiiku",
+            title: "30-sai no Hoken Taiiku",
+        },
+        Anime {
+            slug: "3000-leagues-in-search-of-mother",
+            title: "3000 Leagues in Search of Mother",
+        },
+        Anime {
+            slug: "3d-kanojo-real-girl",
+            title: " 3D Kanojo: Real Girl",
+        },
+        Anime {
+            slug: "3d-kanojo-real-girl-dub",
+            title: "3D Kanojo: Real Girl (Dub)",
+        },
+        Anime {
+            slug: "3d-kanojo-real-girl-2nd-season",
+            title: "3D Kanojo: Real Girl 2nd Season",
+        },
+        Anime {
+            slug: "3d-kanojo-real-girl-2nd-season-dub",
+            title: "3D Kanojo: Real Girl 2nd Season (Dub)",
+        },
+        Anime {
+            slug: "5-centimeters-per-second",
+            title: "5 Centimeters Per Second",
+        },
+        Anime {
+            slug: "5-centimeters-per-second-dub",
+            title: "5 Centimeters per Second (Dub)",
+        },
+        Anime {
+            slug: "5-toubun-no-hanayome-2",
+            title: "5-toubun no Hanayome 2",
+        },
+        Anime {
+            slug: "5-toubun-no-hanayome-2-dub",
+            title: "5-toubun no Hanayome 2 (Dub)",
+        },
+        Anime {
+            slug: "6-angels",
+            title: "6 Angels",
+        },
+        Anime {
+            slug: "6hp-six-hearts-princess",
+            title: "6HP (Six Hearts Princess)",
+        },
+        Anime {
+            slug: "7-seeds",
+            title: "7 Seeds",
+        },
+        Anime {
+            slug: "7-seeds-dub",
+            title: "7 Seeds (Dub)",
+        },
+        Anime {
+            slug: "7-seeds-2nd-season",
+            title: "7 Seeds 2nd Season\t",
+        },
+        Anime {
+            slug: "7-seeds-2nd-season-dub",
+            title: "7 Seeds 2nd Season (Dub)",
+        },
+        Anime {
+            slug: "86",
+            title: "86",
+        },
+        Anime {
+            slug: "91-days",
+            title: "91 Days",
+        },
+        Anime {
+            slug: "91-days-dub",
+            title: "91 Days (Dub)",
+        },
+        Anime {
+            slug: "91-days-special",
+            title: "91 Days Special",
+        },
+        Anime {
+            slug: "a-channel",
+            title: "A Channel",
+        },
+        Anime {
+            slug: "-a-channel-ova-",
+            title: "A Channel Ova ",
+        },
+        Anime {
+            slug: "a-channel-special-",
+            title: "A Channel Special ",
+        },
+        Anime {
+            slug: "a-day-before-us",
+            title: "A Day Before Us",
+        },
+        Anime {
+            slug: "a-letter-to-momo-dub",
+            title: "A Letter to Momo (Dub)",
+        },
+        Anime {
+            slug: "a-little-snow-fairy-sugar",
+            title: "A Little Snow Fairy Sugar",
+        },
+        Anime {
+            slug: "a-little-snow-fairy-sugar-dub",
+            title: "A Little Snow Fairy Sugar (Dub)",
+        },
+        Anime {
+            slug: "a-starry-tale-dub",
+            title: "A Starry Tale (Dub)",
+        },
+        Anime {
+            slug: "a-town-where-you-live",
+            title: "A Town Where You Live",
+        },
+        Anime {
+            slug: "a-tree-of-palme-dub",
+            title: "A Tree of Palme (Dub)",
+        },
+        Anime {
+            slug: "a-useless-onmyoji-family",
+            title: "A Useless Onmyoji Family",
+        },
+        Anime {
+            slug: "a-wind-named-amnesia",
+            title: "A Wind Named Amnesia",
+        },
+        Anime {
+            slug: "a-wind-named-amnesia-dub",
+            title: "A Wind Named Amnesia (Dub)",
+        },
+        Anime {
+            slug: "a-channel-nabe-wo-tabeyou",
+            title: "A-Channel: Nabe wo Tabeyou",
+        },
+        Anime {
+            slug: "a-d-police-dub",
+            title: "A.D. Police (Dub)",
+        },
+        Anime {
+            slug: "a-i-c-o-incarnation",
+            title: "A.I.C.O.: Incarnation",
+        },
+        Anime {
+            slug: "a-i-c-o-incarnation-dub",
+            title: "A.I.C.O.: Incarnation (Dub)",
+        },
+        Anime {
+            slug: "a3-season-autumn-winter",
+            title: "A3! Season Autumn &amp; Winter",
+        },
+        Anime {
+            slug: "a3-season-spring-summer",
+            title: "A3! Season Spring &amp; Summer",
+        },
+        Anime {
+            slug: "a3-season-spring-summer-dub",
+            title: "A3! Season Spring &amp; Summer (Dub)",
+        },
+        Anime {
+            slug: "aa-harimanada",
+            title: "Aa Harimanada",
+        },
+        Anime {
+            slug: "aa-megami-sama",
+            title: "Aa! Megami-sama!",
+        },
+        Anime {
+            slug: "aa-megami-sama-tv-dub",
+            title: "Aa! Megami-sama! (TV) (Dub)",
+        },
+        Anime {
+            slug: "aachi-and-ssipak",
+            title: "Aachi and Ssipak",
+        },
+        Anime {
+            slug: "aachi-wa-ssipak-dub",
+            title: "Aachi wa Ssipak (Dub)",
+        },
+        Anime {
+            slug: "abarenbou-rikishi-matsutarou",
+            title: "Abarenbou Rikishi!! Matsutarou",
+        },
+        Anime {
+            slug: "abciee-shuugyou-nikki",
+            title: "Abciee Shuugyou Nikki",
+        },
+        Anime {
+            slug: "abenobashi",
+            title: "Abenobashi",
+        },
+        Anime {
+            slug: "abenobashi-mahou-shoutengai-dub",
+            title: "Abenobashi Mahou Shoutengai (Dub)",
+        },
+        Anime {
+            slug: "absolute-duo",
+            title: "Absolute Duo",
+        },
+        Anime {
+            slug: "absolute-duo-dub",
+            title: "Absolute Duo (Dub)",
+        },
+        Anime {
+            slug: "abunai-sisters-koko-mika-dub",
+            title: "Abunai Sisters: Koko &amp; Mika (Dub)",
+        },
+        Anime {
+            slug: "acca-13-ku-kansatsu-ka",
+            title: "ACCA: 13-ku Kansatsu-ka",
+        },
+        Anime {
+            slug: "acca-13-ku-kansatsu-ka-regards",
+            title: "ACCA: 13-ku Kansatsu-ka - Regards",
+        },
+        Anime {
+            slug: "acca-13-ku-kansatsu-ka-dub",
+            title: "ACCA: 13-ku Kansatsu-ka (Dub)",
+        },
+        Anime {
+            slug: "accel-world",
+            title: "Accel World",
+        },
+        Anime {
+            slug: "accel-world-dub",
+            title: "Accel World (Dub)",
+        },
+        Anime {
+            slug: "-accel-world-ova",
+            title: "Accel World Ova",
+        },
+        Anime {
+            slug: "-accel-world-specials",
+            title: "Accel World Specials",
+        },
+        Anime {
+            slug: "accel-world-infiniteburst",
+            title: "Accel World: Infinite∞Burst",
+        },
+        Anime {
+            slug: "acchi-kocchi",
+            title: "Acchi Kocchi",
+        },
+        Anime {
+            slug: "acchi-kocchi-place-princess",
+            title: "Acchi Kocchi: Place=Princess",
+        },
+        Anime {
+            slug: "ace-wo-nerae",
+            title: "Ace wo Nerae!",
+        },
+        Anime {
+            slug: "ace-wo-nerae-1979",
+            title: "Ace wo Nerae! (1979)",
+        },
+        Anime {
+            slug: "ace-wo-nerae-2",
+            title: "Ace wo Nerae! 2",
+        },
+        Anime {
+            slug: "ace-wo-nerae-final-stage",
+            title: "Ace wo Nerae!: Final Stage",
+        },
+        Anime {
+            slug: "action-heroine-cheer-fruits",
+            title: "Action Heroine Cheer Fruits",
+        },
+        Anime {
+            slug: "active-raid-kidou-kyoushuushitsu-dai-hachi-gakari-2nd",
+            title: "Active Raid: Kidou Kyoushuushitsu Dai Hachi Gakari 2nd",
+        },
+        Anime {
+            slug: "active-raid-kidou-kyoushuushitsu-dai-hakkei",
+            title: "Active Raid: Kidou Kyoushuushitsu Dai Hakkei",
+        },
+        Anime {
+            slug: "actors-songs-connection",
+            title: "Actors: Songs Connection",
+        },
+        Anime {
+            slug: "actors-songs-connection-dub",
+            title: "Actors: Songs Connection (Dub)",
+        },
+        Anime {
+            slug: "ad-police",
+            title: "AD Police",
+        },
+        Anime {
+            slug: "adachi-to-shimamura",
+            title: "Adachi to Shimamura",
+        },
+        Anime {
+            slug: "adachi-to-shimamura-dub",
+            title: "Adachi to Shimamura (Dub)",
+        },
+        Anime {
+            slug: "adieu-galaxy-express-999-dub",
+            title: "Adieu Galaxy Express 999 (Dub)",
+        },
+        Anime {
+            slug: "africa-no-salaryman-tv",
+            title: "Africa no Salaryman (TV)",
+        },
+        Anime {
+            slug: "africa-no-salaryman-tv-dub",
+            title: "Africa no Salaryman (TV) (Dub)",
+        },
+        Anime {
+            slug: "afro-samurai",
+            title: "Afro Samurai",
+        },
+        Anime {
+            slug: "afro-samurai-dub",
+            title: "Afro Samurai (Dub)",
+        },
+        Anime {
+            slug: "afro-samurai-resurrection-dub",
+            title: "Afro Samurai: Resurrection (Dub)",
+        },
+        Anime {
+            slug: "afro-ken",
+            title: "Afro-Ken",
+        },
+        Anime {
+            slug: "agatha-christie-no-meitantei-poirot-to-marple",
+            title: "Agatha Christie no Meitantei Poirot to Marple",
+        },
+        Anime {
+            slug: "age-of-gunslingers-xue-zu-mi-shi",
+            title: "Age of Gunslingers Ⅲ: Xue Zu Mi Shi",
+        },
+        Anime {
+            slug: "agent-aika",
+            title: "Agent Aika",
+        },
+        Anime {
+            slug: "aggressive-retsuko",
+            title: "Aggressive Retsuko",
+        },
+        Anime {
+            slug: "aggressive-retsuko-2018",
+            title: "Aggressive Retsuko (2018)",
+        },
+        Anime {
+            slug: "aggressive-retsuko-ona-2nd-season",
+            title: "Aggressive Retsuko (ONA) 2nd Season",
+        },
+        Anime {
+            slug: "aggressive-retsuko-ona-3rd-season",
+            title: "Aggressive Retsuko (ONA) 3rd Season",
+        },
+        Anime {
+            slug: "aggressive-retsuko-ona-3rd-season-dub",
+            title: "Aggressive Retsuko (ONA) 3rd Season (Dub)",
+        },
+        Anime {
+            slug: "aggressive-retsuko-we-wish-you-a-metal-christmas",
+            title: "Aggressive Retsuko: We Wish You a Metal Christmas",
+        },
+        Anime {
+            slug: "aguu-tensai-ningyou",
+            title: "Aguu: Tensai Ningyou",
+        },
+        Anime {
+            slug: "ah-my-goddess",
+            title: "Ah! My Goddess",
+        },
+        Anime {
+            slug: "ah-my-goddess-flights-of-fancy-dub",
+            title: "Ah! My Goddess - Flights of Fancy (Dub)",
+        },
+        Anime {
+            slug: "ah-my-goddess-flights-of-fancy-specials-dub",
+            title: "Ah! My Goddess - Flights of Fancy Specials (Dub)",
+        },
+    ],
+)
