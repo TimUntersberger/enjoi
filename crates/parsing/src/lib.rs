@@ -11,10 +11,12 @@ pub mod gogoanime {
 
     #[derive(Debug)]
     pub struct AnimeDetails {
+        id: usize,
         cover_image_url: String,
         summary: String,
         genres: Vec<String>,
         release_year: usize,
+        default_episode: usize,
     }
 
     pub fn parse_anime_list(html: &str) -> ParseResult<Vec<Anime>> {
@@ -38,11 +40,22 @@ pub mod gogoanime {
 
     pub fn parse_anime_details(html: &str) -> ParseResult<AnimeDetails> {
         let doc = Html::parse_document(html);
+        let id_selector = Selector::parse("#movie_id").unwrap();
         let cover_image_selector =
             Selector::parse(".anime_info_body_bg > img:nth-child(1)").unwrap();
         let summary_selector = Selector::parse("p.type:nth-child(5)").unwrap();
         let genres_selector = Selector::parse("p.type:nth-child(6) > a").unwrap();
         let released_selector = Selector::parse("p.type:nth-child(7)").unwrap();
+        let default_episode_selector = Selector::parse("#default_ep").unwrap();
+
+        let id = doc.select(&id_selector)
+            .next()
+            .ok_or("Id is missing")?
+            .value()
+            .attr("value")
+            .ok_or("Id input is missing the value attribute")?
+            .parse::<usize>()
+            .map_err(|_| "Invalid id")?;
 
         let cover_image_url = doc.select(&cover_image_selector)
             .next()
@@ -72,11 +85,22 @@ pub mod gogoanime {
             .parse::<usize>()
             .map_err(|_| "Not a valid release year")?;
 
+        let default_episode = doc.select(&default_episode_selector)
+            .next()
+            .ok_or("Default episode is missing")?
+            .value()
+            .attr("value")
+            .ok_or("Default episode input is missing the value attribute")?
+            .parse::<usize>()
+            .map_err(|_| "Invalid default episode")?;
+
         Ok(AnimeDetails {
+            id,
             cover_image_url,
             summary,
             genres,
-            release_year
+            release_year,
+            default_episode
         })
     }
 }
