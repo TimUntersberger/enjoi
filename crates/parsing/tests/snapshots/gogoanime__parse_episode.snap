@@ -1,0 +1,39 @@
+---
+source: crates/parsing/tests/gogoanime.rs
+expression: "parse_episode(include_str!(\"assets/gogoanime_episode.html\"))"
+
+---
+Ok(
+    Episode {
+        providers: [
+            (
+                "anime",
+                "//gogo-play.net/streaming.php?id=MzUxOA==&title=One+Piece+Episode+1",
+            ),
+            (
+                "vidcdn",
+                "//gogo-play.net/load.php?id=MzUxOA==&title=One+Piece+Episode+1",
+            ),
+            (
+                "streamhd",
+                "https://server01.streamhd.cc/public/dist/index.html?id=fefb2ef5b0004dbf7e08ce62377e1be5",
+            ),
+            (
+                "streamsb",
+                "https://sbembed.com/embed-1mi2209julhc.html",
+            ),
+            (
+                "streamtape",
+                "https://streamtape.com/e/X130QBKazQiDRkY/one-piece-episode-1.mp4",
+            ),
+            (
+                "mp4upload",
+                "https://www.mp4upload.com/embed-39csio6cq634.html",
+            ),
+            (
+                "doodstream",
+                "https://dood.to/e/06r6zm6p85te",
+            ),
+        ],
+    },
+)

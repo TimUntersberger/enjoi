@@ -15,5 +15,6 @@ Ok(
         ],
         release_year: 2021,
         default_episode: 0,
+        episode_count: 17,
     },
 )

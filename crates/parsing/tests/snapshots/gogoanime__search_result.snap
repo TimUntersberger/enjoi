@@ -1,0 +1,59 @@
+---
+source: crates/parsing/tests/gogoanime.rs
+expression: "parse_search_result(include_str!(\"assets/gogoanime_search_result.json\"))"
+
+---
+Ok(
+    [
+        SearchResult {
+            slug: "009-1",
+            title: "009-1",
+            cover_image_url: "https://gogocdn.net/images/anime/A/009-1.jpg",
+        },
+        SearchResult {
+            slug: "one-room",
+            title: "One Room",
+            cover_image_url: "https://gogocdn.net/cover/one-room.png",
+        },
+        SearchResult {
+            slug: "one-outs",
+            title: "One Outs",
+            cover_image_url: "https://gogocdn.net/images/anime/O/one-outs.jpg",
+        },
+        SearchResult {
+            slug: "dr-stone",
+            title: "Dr. Stone",
+            cover_image_url: "https://gogocdn.net/cover/dr-stone.png",
+        },
+        SearchResult {
+            slug: "one-piece",
+            title: "One Piece",
+            cover_image_url: "https://gogocdn.net/images/anime/One-piece.jpg",
+        },
+        SearchResult {
+            slug: "campione",
+            title: "Campione!",
+            cover_image_url: "https://gogocdn.net/images/anime/C/campione.jpg",
+        },
+        SearchResult {
+            slug: "fairy-gone",
+            title: "Fairy Gone",
+            cover_image_url: "https://gogocdn.net/cover/fairy-gone.png",
+        },
+        SearchResult {
+            slug: "bagel-girl",
+            title: "Bagel Girl",
+            cover_image_url: "https://gogocdn.net/cover/bagel-girl.png",
+        },
+        SearchResult {
+            slug: "majin-bone",
+            title: "Majin Bone",
+            cover_image_url: "https://gogocdn.net/images/spring/Majin Bone.jpg",
+        },
+        SearchResult {
+            slug: "cutey-honey",
+            title: "Cutey Honey",
+            cover_image_url: "https://gogocdn.net/cover/cutey-honey.png",
+        },
+    ],
+)
