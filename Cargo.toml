@@ -1,2 +1,3 @@
 [workspace]
 members = ["crates/*"]
+exclude = ["gui/src-tauri"]
