@@ -20,7 +20,8 @@ fn slugify(input: &str) -> String {
     output
 }
 
-fn main() {
+#[tokio::main]
+async fn main() {
     let gogoanime = App::new("gogoanime")
         .about("the gogoanime submodule")
         .subcommand(App::new("search").arg("<text>... 'The text to search for"))
@@ -36,7 +37,7 @@ fn main() {
         Some(("gogoanime", m)) => match m.subcommand() {
             Some(("search", m)) => {
                 let text = m.values_of("text").unwrap().collect::<Vec<_>>().join(" ");
-                match scrape_search(&text) {
+                match scrape_search(&text).await {
                     Ok(results) => {
                         for res in results {
                             println!("{} {}", res.title, format!("https://{}/category/{}", DOMAIN, res.slug).green())
@@ -51,7 +52,7 @@ fn main() {
                 let title = m.values_of("title").unwrap().collect::<Vec<_>>().join(" ");
                 let title = slugify(&title);
 
-                match scrape_anime_details(&title) {
+                match scrape_anime_details(&title).await {
                     Ok(details) => {
                         println!("{}: {}", "Id".blue(), details.id.to_string().cyan());
                         println!("{}: {}", "Cover Image".blue(), details.cover_image_url.green());

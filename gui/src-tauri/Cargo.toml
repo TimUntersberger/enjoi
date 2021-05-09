@@ -16,6 +16,7 @@ tauri-build = { version = "1.0.0-beta-rc.1" }
 
 [dependencies]
 serde_json = "1.0"
+scraping = { path = "../../crates/scraping" }
 serde = { version = "1.0", features = ["derive"] }
 tauri = { version = "1.0.0-beta-rc.4", features =["api-all"]}
 

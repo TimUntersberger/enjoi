@@ -2,20 +2,20 @@ use scraper::{ElementRef, Html, Selector};
 
 pub type ParseResult<T> = Result<T, String>;
 
-#[derive(Debug)]
+#[derive(Debug, serde::Serialize)]
 pub struct Anime {
     pub slug: String,
     pub title: String,
 }
 
-#[derive(Debug)]
+#[derive(Debug, serde::Serialize)]
 pub struct SearchResult {
     pub slug: String,
     pub title: String,
     pub cover_image_url: String,
 }
 
-#[derive(Debug)]
+#[derive(Debug, serde::Serialize)]
 pub struct AnimeDetails {
     pub id: usize,
     pub cover_image_url: String,
@@ -26,7 +26,7 @@ pub struct AnimeDetails {
     pub episode_count: usize,
 }
 
-#[derive(Debug)]
+#[derive(Debug, serde::Serialize)]
 pub struct Episode {
     pub providers: Vec<(String, String)>,
 }
@@ -171,7 +171,7 @@ pub fn parse_episode(html: &str) -> ParseResult<Episode> {
 
 pub fn parse_search_result(json: &str) -> ParseResult<Vec<SearchResult>> {
     // the html has to be escaped inside the json that is why we have to unescape it
-    let html = &json[12..json.len() - 4]
+    let html = &json.trim()[12..json.len() - 2]
         .replace("\\/", "/")
         .replace("\\\"", "\"");
     let frag = Html::parse_fragment(html);
