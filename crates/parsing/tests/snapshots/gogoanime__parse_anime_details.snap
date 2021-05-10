@@ -6,6 +6,7 @@ expression: "parse_anime_details(include_str!(\"assets/gogoanime_anime_details.h
 Ok(
     AnimeDetails {
         id: 9993,
+        title: "Kumo Desu ga, Nani ka?",
         cover_image_url: "https://gogocdn.net/cover/kumo-desu-ga-nani-ka.png",
         summary: "The world where the Hero and the Demon King continue to oppose each other. The grand magic from the Hero and the Demon King cross over worlds and exploded in the classroom of a certain high school.\n\nThe students who died in the explosion will be reincarnated in a different world. The protagonist, who has the lowest reputation in the class, was reincarnated into a spider. Nevertheless, she adapted quickly to the present condition with strong willpower.\n\nThis is a story of she who has become a spider trying whatever she can to live.",
         genres: [

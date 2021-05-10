@@ -18,6 +18,7 @@ pub struct SearchResult {
 #[derive(Debug, serde::Serialize)]
 pub struct AnimeDetails {
     pub id: usize,
+    pub title: String,
     pub cover_image_url: String,
     pub summary: String,
     pub genres: Vec<String>,
@@ -53,12 +54,22 @@ pub fn parse_anime_list(html: &str) -> ParseResult<Vec<Anime>> {
 pub fn parse_anime_details(html: &str) -> ParseResult<AnimeDetails> {
     let doc = Html::parse_document(html);
     let id_selector = Selector::parse("#movie_id").unwrap();
+    let title_selector = Selector::parse(".anime_info_body_bg > h1:nth-child(2)").unwrap();
     let cover_image_selector = Selector::parse(".anime_info_body_bg > img:nth-child(1)").unwrap();
     let summary_selector = Selector::parse("p.type:nth-child(5)").unwrap();
     let genres_selector = Selector::parse("p.type:nth-child(6) > a").unwrap();
     let released_selector = Selector::parse("p.type:nth-child(7)").unwrap();
     let default_episode_selector = Selector::parse("#default_ep").unwrap();
     let episode_pages_selector = Selector::parse("#episode_page li a").unwrap();
+
+    let title = doc
+        .select(&title_selector)
+        .next()
+        .ok_or("Title is missing")?
+        .text()
+        .next()
+        .unwrap_or_default()
+        .to_string();
 
     let id = doc
         .select(&id_selector)
@@ -135,6 +146,7 @@ pub fn parse_anime_details(html: &str) -> ParseResult<AnimeDetails> {
 
     Ok(AnimeDetails {
         id,
+        title,
         cover_image_url,
         summary,
         genres,
