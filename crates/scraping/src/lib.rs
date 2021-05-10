@@ -47,4 +47,19 @@ pub mod gogoanime {
             code => Err(format!("Error {}", code)),
         }
     }
+
+    pub async fn scrape_episode(slug: &str, episode: usize) -> ScrapeResult<Episode> {
+        let res =
+            http_get(format!("https://{}/{}-episode-{}", DOMAIN, slug, episode)).await.map_err(|e| e.to_string())?;
+
+        match res.status() {
+            StatusCode::OK => {
+                let html = res.text().await.map_err(|e| e.to_string())?;
+
+                parse_episode(&html)
+            }
+            StatusCode::NOT_FOUND => Err(format!("Anime not found: {}", slug)),
+            code => Err(format!("Error {}", code)),
+        }
+    }
 }
